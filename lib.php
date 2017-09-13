@@ -29,7 +29,7 @@ function theme_saviotheme_course_nav(moodle_page $page) {
         $format = 'format_'.$courseformat->get_format();
         $page->requires->strings_for_js(array('sectionname'),$format);
         $page->requires->strings_for_js(array('goto'),'theme_saviotheme');
-        $page->requires->js_init_call('saviotheme.show_nav_course_affix', array($format));
+        $page->requires->js_init_call('SAVIOTHEME.show_nav_course_affix', array($format));
     }
 }
 
@@ -177,7 +177,7 @@ function saviotheme_init_notifications($time_request) {
     //$this->content->text = $PAGE->bodyid;
 
     if (!in_array($PAGE->bodyid, $page_noallow_view)) {
-        $PAGE->requires->js_init_call('saviotheme.notification_init', array($url,$time_request));
+        $PAGE->requires->js_init_call('SAVIOTHEME.notification_init', array($url,$time_request));
     }
 }
 
