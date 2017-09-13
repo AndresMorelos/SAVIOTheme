@@ -10,7 +10,7 @@
 if (file_exists("$CFG->dirroot/local/mail/renderer.php")) {
     include_once($CFG->dirroot . "/local/mail/renderer.php");
 
-    class theme_SAVIOTheme_local_mail_renderer extends local_mail_renderer {
+    class theme_saviotheme_local_mail_renderer extends local_mail_renderer {
 
         public function mail($message, $reply = false, $offset = 0) {
             global $CFG, $USER;

@@ -2,7 +2,7 @@
 
 require_once($CFG->dirroot . "/course/renderer.php");
 
-class theme_SAVIOTheme_core_course_renderer extends core_course_renderer {
+class theme_saviotheme_core_course_renderer extends core_course_renderer {
 
     public function course_section_cm($course, &$completioninfo, cm_info $mod, $sectionreturn, $displayoptions = array()) {
         $output = '';

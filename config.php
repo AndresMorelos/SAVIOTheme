@@ -13,7 +13,7 @@ $THEME->enable_dock = false;
 $THEME->editor_sheets = array();
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
-$THEME->csspostprocess = 'theme_SAVIOTheme_process_css';
+$THEME->csspostprocess = 'theme_saviotheme_process_css';
 
 $THEME->layouts = array(
     // Most backwards compatible layout without the blocks - this is the layout used by default.

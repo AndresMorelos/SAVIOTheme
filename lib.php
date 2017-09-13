@@ -6,15 +6,15 @@
  * @param moodle_page $page
  */
 
-function theme_SAVIOTheme_page_init(moodle_page $page) {
+function theme_saviotheme_page_init(moodle_page $page) {
     $page->requires->jquery();
-    $page->requires->jquery_plugin('fitvids', 'theme_SAVIOTheme');
-    $page->requires->jquery_plugin('modernizr', 'theme_SAVIOTheme');
-    $page->requires->jquery_plugin('nicescroll', 'theme_SAVIOTheme');
+    $page->requires->jquery_plugin('fitvids', 'theme_saviotheme');
+    $page->requires->jquery_plugin('modernizr', 'theme_saviotheme');
+    $page->requires->jquery_plugin('nicescroll', 'theme_saviotheme');
     if( SITEID != $page->course->id ){
         $courseformat = course_get_format( $page->course);
         $page->requires->strings_for_js(array('sectionname'),'format_'.$courseformat->get_format());
-        $page->requires->strings_for_js(array('go'),'theme_SAVIOTheme');
+        $page->requires->strings_for_js(array('go'),'theme_saviotheme');
     }
 
 }
@@ -23,12 +23,12 @@ function theme_SAVIOTheme_page_init(moodle_page $page) {
  * Render NAV fixed to all sections course
  */
 
-function theme_SAVIOTheme_course_nav(moodle_page $page) {
+function theme_saviotheme_course_nav(moodle_page $page) {
     if( SITEID != $page->course->id ){
         $courseformat = course_get_format( $page->course);
         $format = 'format_'.$courseformat->get_format();
         $page->requires->strings_for_js(array('sectionname'),$format);
-        $page->requires->strings_for_js(array('goto'),'theme_SAVIOTheme');
+        $page->requires->strings_for_js(array('goto'),'theme_saviotheme');
         $page->requires->js_init_call('SAVIOTheme.show_nav_course_affix', array($format));
     }
 }
@@ -62,11 +62,11 @@ function SAVIOTheme_bootstrap_grid($hassidepost) {
  * @param theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
-function theme_SAVIOTheme_process_css($css, $theme) {
+function theme_saviotheme_process_css($css, $theme) {
 
     // Set the background image for the logo.
     $logo = $theme->setting_file_url('logo', 'logo');
-    $css = theme_SAVIOTheme_set_logo($css, $logo);
+    $css = theme_saviotheme_set_logo($css, $logo);
 
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
@@ -74,7 +74,7 @@ function theme_SAVIOTheme_process_css($css, $theme) {
     } else {
         $customcss = null;
     }
-    $css = theme_SAVIOTheme_set_customcss($css, $customcss);
+    $css = theme_saviotheme_set_customcss($css, $customcss);
 
     return $css;
 }
@@ -86,7 +86,7 @@ function theme_SAVIOTheme_process_css($css, $theme) {
  * @param string $logo The URL of the logo.
  * @return string The parsed CSS
  */
-function theme_SAVIOTheme_set_logo($css, $logo) {
+function theme_saviotheme_set_logo($css, $logo) {
     $tag = '[[setting:logo]]';
     $replacement = $logo;
     if (is_null($replacement)) {
@@ -111,7 +111,7 @@ function theme_SAVIOTheme_set_logo($css, $logo) {
  * @return bool
  */
 /*
-function theme_SAVIOTheme_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+function theme_saviotheme_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage')) {
         $theme = theme_config::load('SAVIOTheme');
         return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
@@ -120,12 +120,12 @@ function theme_SAVIOTheme_pluginfile($course, $cm, $context, $filearea, $args, $
     }
 }*/
 
-function theme_SAVIOTheme_pluginfile($course, $cm, $context, $filearea, $args, $forcedownloadarray,array $options = array()) {
+function theme_saviotheme_pluginfile($course, $cm, $context, $filearea, $args, $forcedownloadarray,array $options = array()) {
 
     if ($context->contextlevel == CONTEXT_SYSTEM
             && ($filearea== "logo" || preg_match("/^bannerimage[0-9]+$/",$filearea) || preg_match("/^videologin_image[0-9]+$/",$filearea) || preg_match("/^primaryslide_image[0-9]+$/",$filearea)   ) ) {
 
-            $theme = theme_config::load('theme_SAVIOTheme');
+            $theme = theme_config::load('theme_saviotheme');
             return $theme->setting_file_serve($filearea, $args, $forcedownloadarray, $options);
 
     } else {
@@ -142,7 +142,7 @@ function theme_SAVIOTheme_pluginfile($course, $cm, $context, $filearea, $args, $
  * @param string $customcss The custom CSS to add.
  * @return string The CSS which now contains our custom CSS.
  */
-function theme_SAVIOTheme_set_customcss($css, $customcss) {
+function theme_saviotheme_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
     $replacement = $customcss;
     if (is_null($replacement)) {
@@ -313,7 +313,7 @@ function SAVIOTheme_get_user_messages($time=null) {
             $u->lastnamephonetic = $message->lastnamephonetic;
             $u->middlename = $message->middlename;
             $u->alternatename =  $message->alternatename;
-            $data["messages"][$k]["created"] = date("d/m/Y h:i:s a", $message->timecreated)." ".(($time)?"<span class='label label-danger'>".  get_string('new', 'theme_SAVIOTheme')."</span>":"");
+            $data["messages"][$k]["created"] = date("d/m/Y h:i:s a", $message->timecreated)." ".(($time)?"<span class='label label-danger'>".  get_string('new', 'theme_saviotheme')."</span>":"");
             $data["messages"][$k]["news"] = ($time)?"new":"old";
             $data["messages"][$k]["linkto"] = $CFG->wwwroot . '/message/index.php?viewing=unread&user2=' . $message->uid;
             $data["messages"][$k]["userimage"] = $OUTPUT->user_picture($u, array('size' => 30, 'link' => false,'class'=>'media-object img-circle'));
@@ -379,7 +379,7 @@ function SAVIOTheme_get_upcomming($time=0) {
                 $events[$i]->name = $events[$i]->referer;
                 // That's an activity event, so let's provide the hyperlink
             }
-            $events[$i]->time = (($time)?"<span class='label label-danger'>".  get_string('new', 'theme_SAVIOTheme')."</span>":"").str_replace('&raquo;', '<br />&raquo;', $events[$i]->time);
+            $events[$i]->time = (($time)?"<span class='label label-danger'>".  get_string('new', 'theme_saviotheme')."</span>":"").str_replace('&raquo;', '<br />&raquo;', $events[$i]->time);
             $events[$i]->news = ($time)?"new":"old";
             $data["upcomings"][]= $events[$i];
         }
@@ -469,7 +469,7 @@ function SAVIOTheme_get_events($courses,$timestart) {
                     if ($cm->has_view() && $cm->uservisible) {
                         //Created
                         if($wascreated ){
-                            $stradded = get_string('added', 'theme_SAVIOTheme');
+                            $stradded = get_string('added', 'theme_saviotheme');
                             $changelist[$log->cmid] = array(
                                 'operation' => 'add',
                                 'text' => "<span class='action_event add $cm->modname'>$stradded</span><a class='link_event' href=\"".$cm->url."\">" . format_string($cm->name, true) . "</a> (".get_string('modulename', $cm->modname).") ",
@@ -480,7 +480,7 @@ function SAVIOTheme_get_events($courses,$timestart) {
                                 'icon'=>$OUTPUT->pix_url('icon', $cm->modname). '');
                         }//Update
                         else{
-                            $strupdated = get_string('updated', 'theme_SAVIOTheme');
+                            $strupdated = get_string('updated', 'theme_saviotheme');
                             $changelist[$log->cmid] = array('operation' => 'update', 'text' => "<span class='action_event update $cm->modname'>$strupdated</span><a class='link_event' href=\"".$cm->url."\">" . format_string($cm->name, true) . "</a> (".get_string('modulename', $cm->modname).")",
                                     'course'=>array(
                                                             'id'=>$log->courseid,
@@ -499,9 +499,9 @@ function SAVIOTheme_get_events($courses,$timestart) {
             if (!$content) {
                 $content = true;
             }
-            $inthecourse = get_string('inthecourse', 'theme_SAVIOTheme');
+            $inthecourse = get_string('inthecourse', 'theme_saviotheme');
             foreach ($changelist as $changeinfo => $change) {
-                $data["events"][$changeinfo]["text"] = (($timestart != $USER->lastlogin)?"<span class='label label-danger'>".  get_string('new', 'theme_SAVIOTheme')."</span>":"").$change['text']." ".$inthecourse;
+                $data["events"][$changeinfo]["text"] = (($timestart != $USER->lastlogin)?"<span class='label label-danger'>".  get_string('new', 'theme_saviotheme')."</span>":"").$change['text']." ".$inthecourse;
                 $data["events"][$changeinfo]["course"] = $change['course'];
                 $data["events"][$changeinfo]["icon"] = $change['icon'];
                 $data["events"][$changeinfo]["link"] ='<a href="'.$CFG->wwwroot .'/course/view.php?id='.$change["course"]["id"].'">'.$change["course"]["fullname"].'</a>';

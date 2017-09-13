@@ -30,7 +30,7 @@ if (right_to_left()) {
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
 $knownsidepre = $PAGE->blocks->is_known_region('side-pre');
 $regions = SAVIOTheme_bootstrap_grid($hassidepost);
-theme_SAVIOTheme_course_nav($PAGE);
+theme_saviotheme_course_nav($PAGE);
 echo $OUTPUT->doctype()
 ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -81,7 +81,7 @@ echo $OUTPUT->doctype()
                                         </div>
                                     <?php else: ?>
                                         <?php if ($PAGE->user_is_editing()): ?>
-                                            <a class="btn edit_cover no-image-cover" href="<?php echo $CFG->wwwroot . "/course/edit.php?id=" . $PAGE->course->id ?>#fitem_id_overviewfiles_filemanager"><?php echo ""/* get_string('edit_frontimage','theme_SAVIOTheme') */ ?>Editar portada</a>
+                                            <a class="btn edit_cover no-image-cover" href="<?php echo $CFG->wwwroot . "/course/edit.php?id=" . $PAGE->course->id ?>#fitem_id_overviewfiles_filemanager"><?php echo ""/* get_string('edit_frontimage','theme_saviotheme') */ ?>Editar portada</a>
                                         <?php endif ?>
                                     <?php endif; ?>
                                 <div class="course_top_wrapper <?php echo ( $teachers ) ? "" : "without-teacher" ?>">

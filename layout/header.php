@@ -26,7 +26,7 @@
                 <?php if (isloggedin()): ?>
                     <div id="user-pic">
                         <?php echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size' => 50, 'class' => 'img-circle'))); ?>
-                        <h4 class="username"><?php echo get_string('usergreeting', 'theme_SAVIOTheme', $USER->firstname) ?></h4>
+                        <h4 class="username"><?php echo get_string('usergreeting', 'theme_saviotheme', $USER->firstname) ?></h4>
                     </div>
                 <?php endif; ?>
             </div>

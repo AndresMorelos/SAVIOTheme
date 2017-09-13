@@ -8,10 +8,10 @@
 
 include_once($CFG->dirroot . "/course/format/topics/renderer.php");
 
-class theme_SAVIOTheme_format_topics_renderer extends format_topics_renderer {
+class theme_saviotheme_format_topics_renderer extends format_topics_renderer {
 
     protected function get_nav_links($course, $sections, $sectionno) {
-        return theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno);
+        return theme_saviotheme_get_nav_links($course, $sections, $sectionno);
     }
 
     public function print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection) {
@@ -99,10 +99,10 @@ class theme_SAVIOTheme_format_topics_renderer extends format_topics_renderer {
 
 include_once($CFG->dirroot . "/course/format/weeks/renderer.php");
 
-class theme_SAVIOTheme_format_weeks_renderer extends format_weeks_renderer {
+class theme_saviotheme_format_weeks_renderer extends format_weeks_renderer {
 
     protected function get_nav_links($course, $sections, $sectionno) {
-        return theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno);
+        return theme_saviotheme_get_nav_links($course, $sections, $sectionno);
     }
 
     public function print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection) {
@@ -192,10 +192,10 @@ class theme_SAVIOTheme_format_weeks_renderer extends format_weeks_renderer {
 if (file_exists("$CFG->dirroot/course/format/topcoll/renderer.php")) {
     include_once($CFG->dirroot . "/course/format/topcoll/renderer.php");
 
-    class theme_SAVIOTheme_format_topcoll_renderer extends format_topcoll_renderer {
+    class theme_saviotheme_format_topcoll_renderer extends format_topcoll_renderer {
 
         protected function get_nav_links($course, $sections, $sectionno) {
-            return theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno);
+            return theme_saviotheme_get_nav_links($course, $sections, $sectionno);
         }
 
         public function print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection) {
@@ -286,10 +286,10 @@ if (file_exists("$CFG->dirroot/course/format/topcoll/renderer.php")) {
 if (file_exists("$CFG->dirroot/course/format/grid/renderer.php")) {
     include_once($CFG->dirroot . "/course/format/grid/renderer.php");
 
-    class theme_SAVIOTheme_format_grid_renderer extends format_grid_renderer {
+    class theme_saviotheme_format_grid_renderer extends format_grid_renderer {
 
         protected function get_nav_links($course, $sections, $sectionno) {
-            return theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno);
+            return theme_saviotheme_get_nav_links($course, $sections, $sectionno);
         }
 
         public function print_single_section_page($course, $sections, $mods, $modnames, $modnamesused, $displaysection) {
@@ -382,10 +382,10 @@ if (file_exists("$CFG->dirroot/course/format/grid/renderer.php")) {
 if (file_exists("$CFG->dirroot/course/format/onetopic/renderer.php")) {
     include_once($CFG->dirroot . "/course/format/onetopic/renderer.php");
 
-    class theme_SAVIOTheme_format_onetopic_renderer extends format_onetopic_renderer {
+    class theme_saviotheme_format_onetopic_renderer extends format_onetopic_renderer {
 
         protected function get_nav_links($course, $sections, $sectionno) {
-            return theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno);
+            return theme_saviotheme_get_nav_links($course, $sections, $sectionno);
         }
 
     }
@@ -396,10 +396,10 @@ if (file_exists("$CFG->dirroot/course/format/onetopic/renderer.php")) {
 if (file_exists("$CFG->dirroot/course/format/weekssavio/renderer.php")) {
     include_once($CFG->dirroot . "/course/format/weekssavio/renderer.php");
 
-    class theme_SAVIOTheme_format_weekssavio_renderer extends format_weekssavio_renderer {
+    class theme_saviotheme_format_weekssavio_renderer extends format_weekssavio_renderer {
 
         protected function get_nav_links($course, $sections, $sectionno) {
-            return theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno);
+            return theme_saviotheme_get_nav_links($course, $sections, $sectionno);
         }
 
     }
@@ -407,7 +407,7 @@ if (file_exists("$CFG->dirroot/course/format/weekssavio/renderer.php")) {
 }
 
 
-function theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno) {
+function theme_saviotheme_get_nav_links($course, $sections, $sectionno) {
     // FIXME: This is really evil and should by using the navigation API.
     $courseformat = course_get_format($course);
     $course = $courseformat->get_course();
@@ -429,7 +429,7 @@ function theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno) {
             $previouslink .= html_writer::end_tag('div');
             $previouslink .= html_writer::start_tag('span', array('class' => 'text'));
             $previouslink .= html_writer::start_tag('span', array('class' => 'nav_guide'));
-            $previouslink .= get_string('previoussection', 'theme_SAVIOTheme');
+            $previouslink .= get_string('previoussection', 'theme_saviotheme');
             $previouslink .= html_writer::end_tag('span');
             $previouslink .= html_writer::empty_tag('br');
             $previouslink .= $courseformat->get_section_name($sections[$back]);
@@ -451,7 +451,7 @@ function theme_SAVIOTheme_get_nav_links($course, $sections, $sectionno) {
             $nextlink .= html_writer::end_tag('div');
             $nextlink .= html_writer::start_tag('span', array('class' => 'text'));
             $nextlink .= html_writer::start_tag('span', array('class' => 'nav_guide'));
-            $nextlink .= get_string('nextsection', 'theme_SAVIOTheme');
+            $nextlink .= get_string('nextsection', 'theme_saviotheme');
             $nextlink .= html_writer::end_tag('span');
             $nextlink .= html_writer::empty_tag('br');
             $nextlink .= $courseformat->get_section_name($sections[$forward]);

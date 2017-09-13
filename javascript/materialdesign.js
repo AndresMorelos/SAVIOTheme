@@ -479,7 +479,7 @@ SAVIOTheme.show_nav_course_affix = function(Y,format){
         }
     });
 
-    containernav.append('<div class="navbar-header"><a class="btn btn-navbar" data-toggle="collapse" data-target=".section_nav_affix_nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><span class="text_nav_affix">'+M.util.get_string('goto', 'theme_SAVIOTheme') +'</span></div>')
+    containernav.append('<div class="navbar-header"><a class="btn btn-navbar" data-toggle="collapse" data-target=".section_nav_affix_nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><span class="text_nav_affix">'+M.util.get_string('goto', 'theme_saviotheme') +'</span></div>')
     nav.append(list);
     containernav.append(nav);
     containerinner.append(containernav);

@@ -1,6 +1,6 @@
 <?php
 
-class theme_SAVIOTheme_core_renderer extends core_renderer {
+class theme_saviotheme_core_renderer extends core_renderer {
 
     /** @var custom_menu_item language The language menu if created */
     protected $language = null;
@@ -346,11 +346,11 @@ class theme_SAVIOTheme_core_renderer extends core_renderer {
         if ($addusermenu) {
             if (isloggedin() && !isguestuser()) {
                 $usermenu = $menu->add(
-                        get_string('usergreeting', 'theme_SAVIOTheme', $USER->firstname)
-                        , new moodle_url('#'), get_string('usergreeting', 'theme_SAVIOTheme', $USER->firstname), 10001);
+                        get_string('usergreeting', 'theme_saviotheme', $USER->firstname)
+                        , new moodle_url('#'), get_string('usergreeting', 'theme_saviotheme', $USER->firstname), 10001);
 
                 $usermenu->add(
-                        '<i class="fa fa-briefcase"></i>' . get_string('mydashboard', 'theme_SAVIOTheme'), new moodle_url('/my'), get_string('mydashboard', 'theme_SAVIOTheme')
+                        '<i class="fa fa-briefcase"></i>' . get_string('mydashboard', 'theme_saviotheme'), new moodle_url('/my'), get_string('mydashboard', 'theme_saviotheme')
                 );
 
                 $usermenu->add(
@@ -426,11 +426,11 @@ class theme_SAVIOTheme_core_renderer extends core_renderer {
         if (isloggedin() && !isguestuser()) {
             global $USER;
             $menu = '<li class="dropdown" id="course_notifications_link">';
-            $menu .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="' . get_string('notifications', 'theme_SAVIOTheme') . '">';
-            $menu .= '<span id="flag_notification_wrapper" class="badge count_notification"></span> <i class="fa fa-bell"></i>' . get_string('notifications', 'theme_SAVIOTheme');
+            $menu .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="' . get_string('notifications', 'theme_saviotheme') . '">';
+            $menu .= '<span id="flag_notification_wrapper" class="badge count_notification"></span> <i class="fa fa-bell"></i>' . get_string('notifications', 'theme_saviotheme');
             $menu .= '</a>
                         <div class="dropdown-menu" id="notification-wrap" style="">
-                           <div class="wrap first"><h4>' . get_string('upcomingevents', 'calendar') . '<span class="sub activity_since">' . get_string('upcoming_text', 'theme_SAVIOTheme') . '</span></h4><ul id="upcoming-notification"></ul></div>
+                           <div class="wrap first"><h4>' . get_string('upcomingevents', 'calendar') . '<span class="sub activity_since">' . get_string('upcoming_text', 'theme_saviotheme') . '</span></h4><ul id="upcoming-notification"></ul></div>
                            <div class="wrap"><h4>' . get_string("courseupdates") . '<span class="sub activity_since">' . get_string('activitysince', '', userdate($USER->lastlogin)) . '</span></h4><ul id="recent-notification"></ul></div>
                         </div>
                     ';
@@ -441,7 +441,7 @@ class theme_SAVIOTheme_core_renderer extends core_renderer {
             $menu .= '<span id="flag_messages_wrapper" class="badge count_message"></span> <i class="fa fa-comments"></i>' . get_string('messages', 'message');
             $menu .= '</a><ul class="dropdown-menu" id="message-list">
                             <li class="last all-message">
-                                <a title="' . get_string('gotoallmessage', 'theme_SAVIOTheme') . '" href="' . new moodle_url('/message/index.php') . '">' . get_string('gotoallmessage', 'theme_SAVIOTheme') . '</a>
+                                <a title="' . get_string('gotoallmessage', 'theme_saviotheme') . '" href="' . new moodle_url('/message/index.php') . '">' . get_string('gotoallmessage', 'theme_saviotheme') . '</a>
                             </li>
                         </ul>';
             $menu .= '';
@@ -547,7 +547,7 @@ class theme_SAVIOTheme_core_renderer extends core_renderer {
  * @copyright  2014 Sam Hemelryk
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class theme_SAVIOTheme_core_renderer_maintenance extends core_renderer_maintenance {
+class theme_saviotheme_core_renderer_maintenance extends core_renderer_maintenance {
 
     /**
      * Renders notifications for maintenance scripts.

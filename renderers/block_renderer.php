@@ -14,7 +14,7 @@
 if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
     include_once($CFG->dirroot . "/blocks/course_overview/renderer.php");
 
-    class theme_SAVIOTheme_block_course_overview_renderer extends block_course_overview_renderer {
+    class theme_saviotheme_block_course_overview_renderer extends block_course_overview_renderer {
 
         public function course_overview($courses, $overviews) {
             GLOBAL $CFG;
