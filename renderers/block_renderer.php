@@ -58,9 +58,9 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
             }
 
             foreach ($courses as $key => $course) {
-                
+
                 $html .= html_writer::start_tag('div', array('class' => 'wrap-coursebox'));
-                
+
                 // If moving course, then don't show course which needs to be moved.
                 if ($ismovingcourse && ($course->id == $movingcourseid)) {
                     continue;
@@ -74,14 +74,14 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
 
                 $img_src = $this->get_image_course($course);
                 $html .= html_writer::start_tag('figure', array('class' => 'course_image'));
-                    
+
                 if ($img_src) {
                     $image = html_writer::empty_tag('img', array('src' => $img_src,
                                 'alt' => '', 'title' => $course->fullname));
                 }else{
                     $image = '';
                 }
-                
+
                 $html .= html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)), $image);
                 $html .= html_writer::end_tag('figure');
 
@@ -118,10 +118,10 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
 
                 $html .= html_writer::start_tag('div', array('class' => 'course_extra_info'));
 
-                $html .= html_writer::tag('h2', html_writer::link($courseurl, get_string('gotocourse', 'theme_metro')));
+                $html .= html_writer::tag('h2', html_writer::link($courseurl, get_string('gotocourse', 'saviotheme')));
                 $html .= html_writer::start_tag('div', array('class' => 'option-course-info'));
 
-                // display course contacts. See course_in_list::get_course_contacts()     
+                // display course contacts. See course_in_list::get_course_contacts()
                 if ($course->has_course_contacts()) {
                     $teacher = html_writer::start_tag('div', array('class' => 'teachers-wrap'));
                     $i = 1;
@@ -183,7 +183,7 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
                 $html .= html_writer::end_tag('div');
 
             }
-            
+
             // Wrap course list in a div and return.
             return html_writer::tag('div', $html, array('class' => 'course_list'));
         }
