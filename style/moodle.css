@@ -17551,7 +17551,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 2/06/2015, 01:19:55 PM
     Author     : erick
 */
@@ -17757,7 +17757,7 @@ input[type="color"]:focus,
     border-color: #f44336;
 }
 /******
-       LAYOUT 
+       LAYOUT
 ******/
 #top-header {
     z-index: 9999;
@@ -18023,7 +18023,7 @@ body.view #top-header {
     margin-top: 3px;
 }
 /******
-       REGIONS 
+       REGIONS
 ******/
 body.editing .region-addons {
     min-height: 70px;
@@ -18034,14 +18034,14 @@ body.editing .region-addons .wrapper {
     min-height: 70px;
 }
 /******
-       BLOCK 
+       BLOCK
 ******/
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 10/06/2015, 02:07:23 PM
     Author     : erick
 */
@@ -18442,7 +18442,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 1/06/2015, 08:11:05 AM
     Author     : erick
 */
@@ -18744,7 +18744,7 @@ mm-block-region-side-post .asidebar-item-menu-wrap-block,
 }
 /*
 @media (max-width: 1280px){
-    
+
     body.editing .asidebar-item-menu.header{
         width: 40px;
         height: 40px;
@@ -18759,7 +18759,7 @@ mm-block-region-side-post .asidebar-item-menu-wrap-block,
         line-height: 16px;
         padding: 10px 6px !important;
     }
-    
+
 }
 
 @media (max-width: 1024px){
@@ -18770,7 +18770,7 @@ mm-block-region-side-post .asidebar-item-menu-wrap-block,
     body.editing #block-region-side-pre{
         min-width: 30px;
     }
-    
+
     .asidebar-item-menu.header{
         width: 30px;
         height: 30px;
@@ -19306,7 +19306,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 5/06/2015, 11:22:49 AM
     Author     : erick
 */
@@ -19418,3 +19418,48 @@ and open the template in the editor.
     }
 }
 /*# sourceMappingURL=moodle.css.map */
+
+/* edited by Andrés Morelos */
+ .header .content{
+   overflow-y: auto !important;
+   max-height: 500px !important;
+ }
+
+ .wrap-coursebox{
+   width: 49% !important;
+ }
+.coursebox{
+  position: relative !important;
+  height: 70px !important;
+  overflow: hidden !important;
+  padding: 0px !important;
+  max-height: 70px !important;
+}
+figure.course_image{
+  display: block !important;
+  margin: 0 0 0 0 !important;
+  height: 70px !important;
+  width: 70px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  float: left !important;
+}
+.block_course_overview .course_title{
+  margin-left: 15px;
+}
+.course_extra_info .option-course-info{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  background: #E8E8E8;
+
+}
+.course_extra_info .option-course-info .teachers-wrap{
+  margin-right: 5px;
+  float: right;
+}
+.course_extra_info h2 a{
+  position: relative;
+  margin-left: 15px;
+}
