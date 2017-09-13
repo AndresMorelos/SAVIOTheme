@@ -43,3 +43,6 @@ $string['feedback_required']="<h2>Por favor deja tu comentario.</h2>";
 $string['feedback_error']="<h2>Upps, algo salió mal. Intentalo nuevamente.</h2>";
 $string['feedback_close']="Cerrar";
 $string['feedback_return']="Volver al formulario";
+
+
+$string['gotocourse'] = 'Ir al curso';
