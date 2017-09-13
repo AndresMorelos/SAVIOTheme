@@ -7,7 +7,6 @@
  */
 
 function theme_saviotheme_page_init(moodle_page $page) {
-    $page->requires->jquery();
     $page->requires->jquery_plugin('fitvids', 'theme_saviotheme');
     $page->requires->jquery_plugin('modernizr', 'theme_saviotheme');
     $page->requires->jquery_plugin('nicescroll', 'theme_saviotheme');
