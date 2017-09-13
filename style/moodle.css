@@ -19420,7 +19420,7 @@ and open the template in the editor.
 /*# sourceMappingURL=moodle.css.map */
 
 /* edited by Andrés Morelos */
- .header .content{
+ .header > .content{
    overflow-y: auto !important;
    max-height: 500px !important;
  }
