@@ -1,0 +1,148 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/06/2015, 01:19:55 PM
+    Author     : erick
+*/
+label, input, button, select, textarea{
+    font-weight: 300;
+}
+
+
+
+button, input.form-submit, input[type="button"], input[type="submit"], input[type="reset"]{
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      touch-action: manipulation;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: normal;
+      padding: 6px 12px;
+      font-size: 13px;
+      line-height: 1.42857143;
+      border-radius: 2px;
+      color: #fff;
+      background-color: #2196f3;
+      border-color: #cccccc;
+      border: 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      text-shadow: none;
+}
+
+.waves-button{
+    button, input.form-submit, input[type="button"], input[type="submit"], input[type="reset"]{
+        margin: 0;
+    }
+}
+
+button, input.form-submit, input[type="button"], input[type="submit"], input[type="reset"]{
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    border: 0;
+    text-transform: uppercase;
+}
+
+button:hover, input.form-submit:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:focus, input.form-submit:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus{
+    color: #fff;
+    background-color: #2196f3;
+    border-color: transparent;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.breadcrumb-button input[type="submit"]{
+     // background-color: #3f51b5 !important;
+}
+
+input.form-submit, input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], td.submit input{
+    color: #ffffff;
+    background-color: #4caf50;
+    border-color: #449d48;
+    background-image: none;
+    border-color: none;
+}
+
+input.form-submit:hover, input#id_submitbutton:hover, input#id_submitbutton2:hover, .path-admin .buttons input[type="submit"]:hover, td.submit input:hover, input.form-submit:focus, input#id_submitbutton:focus, input#id_submitbutton2:focus, .path-admin .buttons input[type="submit"]:focus, td.submit input:focus, input.form-submit:active, input#id_submitbutton:active, input#id_submitbutton2:active, .path-admin .buttons input[type="submit"]:active, td.submit input:active, input.form-submit.active, input#id_submitbutton.active, input#id_submitbutton2.active, .path-admin .buttons input[type="submit"].active, td.submit input.active, input.form-submit.disabled, input#id_submitbutton.disabled, input#id_submitbutton2.disabled, .path-admin .buttons input[type="submit"].disabled, td.submit input.disabled, input.form-submit[disabled], input#id_submitbutton[disabled], input#id_submitbutton2[disabled], .path-admin .buttons input[type="submit"][disabled], td.submit input[disabled]{
+    background-color: #4caf50;
+}
+
+textarea,select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+    display: inline-block;
+    height: 30px;
+    padding: 1px 12px;
+    font-size: 16px;
+    color: @main_color;
+    background-color: #ffffff;
+    background-image: none;
+    border-radius: 0;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid @main_color_heading;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+select{
+    border: 1px solid #ccc;
+    max-width: 300px;
+    word-wrap: normal;
+    height: 35px;
+}
+
+textarea{
+    min-height: 100px;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus{
+    border-color: darken(@main_color_heading,10%);
+    outline: 0;
+    box-shadow: none;
+}
+
+.mform {
+    .fitem.required:has(>.felement > div > .error){
+        .fitemtitle{
+            label{
+                color:#b94a48;
+            }
+        }
+    } 
+    .fitem .felement{
+        position: relative;
+    }
+    span.error{
+        position: absolute;
+        bottom: -10px;
+        font-size: 12px;
+        padding: 0px;
+        margin-bottom: 0;
+        border: none;
+        background: none;
+    }
+    br.error{
+        display:none;
+    }
+    .felement.error{
+        input{
+            border-color: #f44336;
+        }
+    }
+}

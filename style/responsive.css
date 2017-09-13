@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5/06/2015, 11:22:49 AM
+    Author     : erick
+*/
+@media (max-width: 767px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #top-header .brand {
+    margin: 0 0 5px 30px;
+    padding-right: 13px;
+  }
+  #top-header .brand img {
+    height: 30px;
+  }
+  #top-header #name-and-slogan {
+    width: 150px;
+    line-height: 14px;
+    margin-top: 11px;
+  }
+  #top-header #name-and-slogan a {
+    font-size: 14px;
+  }
+  #page-footer {
+    text-align: center;
+  }
+  #page-footer .brand {
+    float: none;
+    padding-right: 0px;
+  }
+  #page-footer #name-and-slogan {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    float: none;
+  }
+  #page-footer .left-column {
+    margin-top: 10px;
+  }
+  .text_nav_affix {
+    padding: 20px 10px 0 10px;
+  }
+  .section_nav_affix .affix_section_name {
+    display: inline;
+  }
+}
+@media (max-width: 979px) {
+  #top-header #user-pic {
+    display: none;
+  }
+  #top-header #moodle-navbar {
+    margin-right: 0;
+  }
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .dropdown-menu a:hover,
+  .nav-collapse .dropdown-menu a:focus,
+  .nav-collapse .dropdown-submenu a:focus,
+  .nav-collapse .dropdown-submenu a:hover,
+  .nav-collapse .dropdown-submenu a:active,
+  .nav-collapse .dropdown-menu > li > a:hover,
+  .nav-collapse .dropdown-menu > li > a:focus {
+    color: #fff;
+    text-shadow: none;
+  }
+  #top-header #message-list,
+  #top-header #notification-wrap {
+    width: auto;
+  }
+  #top-header #notification-wrap {
+    background-color: #fff;
+  }
+}
+@media (max-width: 1024px) {
+  #top-header .brand {
+    margin: 0 0 5px 30px;
+    padding-right: 13px;
+  }
+  #top-header .brand img {
+    height: 40px;
+  }
+  #top-header #name-and-slogan {
+    line-height: 16px;
+  }
+  #top-header #name-and-slogan a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1200px) {
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 1110px;
+  }
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  .row-fluid .span3 {
+    width: 100%;
+  }
+  .row-fluid .span9 {
+    width: 100%;
+  }
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
