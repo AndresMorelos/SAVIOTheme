@@ -1,10 +1,10 @@
 <?php
-$PAGE->requires->js("/theme/SAVIOTheme/javascript/login/jquery-ui-1.8.22.custom.min.js", false);
-$PAGE->requires->js("/theme/SAVIOTheme/javascript/login/jquery.imagesloaded.min.js", false);
-$PAGE->requires->js("/theme/SAVIOTheme/javascript/login/bigvideo.js", false);
-$PAGE->requires->js("/theme/SAVIOTheme/javascript/login/jquery.transit.min.js", false);
-$PAGE->requires->css("/theme/SAVIOTheme/style/login.css");
-$PAGE->requires->css("/theme/SAVIOTheme/style/bigvideo.css");
+$PAGE->requires->js("/theme/saviotheme/javascript/login/jquery-ui-1.8.22.custom.min.js", false);
+$PAGE->requires->js("/theme/saviotheme/javascript/login/jquery.imagesloaded.min.js", false);
+$PAGE->requires->js("/theme/saviotheme/javascript/login/bigvideo.js", false);
+$PAGE->requires->js("/theme/saviotheme/javascript/login/jquery.transit.min.js", false);
+$PAGE->requires->css("/theme/saviotheme/style/login.css");
+$PAGE->requires->css("/theme/saviotheme/style/bigvideo.css");
 
 $videos = array();
 

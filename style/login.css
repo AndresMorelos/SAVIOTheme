@@ -206,7 +206,7 @@ html.login-page {
   position: fixed;
   top: 0px;
   left: 0px;
-  background: url(/theme/SAVIOTheme/pix/bg_texture.png) repeat;
+  background: url(/theme/saviotheme/pix/bg_texture.png) repeat;
 }
 #page-login-index .screen {
   position: relative;

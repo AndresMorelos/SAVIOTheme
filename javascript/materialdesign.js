@@ -2,15 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-var SAVIOTheme = SAVIOTheme || {};
+var saviotheme = saviotheme || {};
 
-SAVIOTheme.notify_time = 0;
+saviotheme.notify_time = 0;
 
 /**
  * Init all function for this theme
  * @returns void
  */
-SAVIOTheme.init = function () {
+saviotheme.init = function () {
     this.init_side_bar();
     this.register_handles();
     this.config_login_password();
@@ -21,7 +21,7 @@ SAVIOTheme.init = function () {
  * Register all event for pages elements
  * @returns void
  */
-SAVIOTheme.register_handles = function(){
+saviotheme.register_handles = function(){
     var heigth = $("#top-header").outerHeight( true );
 
     $(window).scroll(function () {
@@ -75,7 +75,7 @@ SAVIOTheme.register_handles = function(){
  *
  * @returns void
  */
-SAVIOTheme.init_side_bar = function () {
+saviotheme.init_side_bar = function () {
     var items = $("#block-region-side-pre .asidebar-item-menu-wrap > span.asidebar-item-menu");
     var timer;
     $(".asidebar-item-menu-wrap > span.asidebar-item-menu").on('click', function () {
@@ -112,7 +112,7 @@ SAVIOTheme.init_side_bar = function () {
  * @param timer it
  * @returns void
  */
-SAVIOTheme.notification_init = function (Y, url, it) {
+saviotheme.notification_init = function (Y, url, it) {
     var inst = this;
     inst.notification_ajax(url);
     window.setInterval(function () {
@@ -131,7 +131,7 @@ SAVIOTheme.notification_init = function (Y, url, it) {
  * @param string url
  * @returns {undefined}
  */
-SAVIOTheme.notification_ajax = function (url) {
+saviotheme.notification_ajax = function (url) {
     var inst = this;
     $.ajax({
         url: url,
@@ -154,7 +154,7 @@ SAVIOTheme.notification_ajax = function (url) {
  * @param Object m
  * @returns {undefined}
  */
-SAVIOTheme.notification_proccess_messages = function (m) {
+saviotheme.notification_proccess_messages = function (m) {
     var badget = $("#flag_messages_wrapper");
     var menu_items = badget.parent("a").next("#message-list");
     var inst = this;
@@ -205,7 +205,7 @@ SAVIOTheme.notification_proccess_messages = function (m) {
  * @param Object u
  * @returns void
  */
-SAVIOTheme.notification_proccess_upcomming = function (u) {
+saviotheme.notification_proccess_upcomming = function (u) {
     var badget = $("#flag_notification_wrapper");
     var menu_items = $("#upcoming-notification");
     var inst = this;
@@ -266,7 +266,7 @@ SAVIOTheme.notification_proccess_upcomming = function (u) {
  * @param Object u
  * @returns void
  */
-SAVIOTheme.notification_proccess_recent = function (u) {
+saviotheme.notification_proccess_recent = function (u) {
     var badget = $("#flag_notification_wrapper");
     var menu_items = $("#recent-notification");
     var inst = this;
@@ -308,7 +308,7 @@ SAVIOTheme.notification_proccess_recent = function (u) {
  * Function to validate usernama and password of the SIRIUS UTB
  * @returns void
  */
-SAVIOTheme.config_login_password = function () {
+saviotheme.config_login_password = function () {
     $("#page-login-index #username").blur(function () {
         //expresion regular para validar que empieze por t, que tenga luego 3 ceros, y luego alfanumericos
         var RegEx = /^(T|t){1}[0]{3}([0-9]{5})+/i;
@@ -342,7 +342,7 @@ SAVIOTheme.config_login_password = function () {
  * Init feedback form
  * @returns {undefined}
  */
-SAVIOTheme.init_feedback = function () {
+saviotheme.init_feedback = function () {
     var inst = this;
     $("#feedback_wrap .feedback_buttom a").click(function (e) {
         var form = $(this).parent().next();
@@ -363,8 +363,8 @@ SAVIOTheme.init_feedback = function () {
  * Load feedback form in pages.
  * @returns void
  */
-SAVIOTheme.load_feedback_form = function () {
-    $("#feedback_wrap .feedback_form").load(M.cfg.wwwroot + '/theme/SAVIOTheme/feedback.php', function () {
+saviotheme.load_feedback_form = function () {
+    $("#feedback_wrap .feedback_form").load(M.cfg.wwwroot + '/theme/saviotheme/feedback.php', function () {
         var fbrate = $("#feedback_rate_rating");
         var rate = 0;
         if (fbrate.length > 0) {
@@ -372,8 +372,8 @@ SAVIOTheme.load_feedback_form = function () {
             fbrate.jRating({
                 sendRequest: false,
                 canRateAgain: true,
-                bigStarsPath: M.cfg.wwwroot + '/theme/SAVIOTheme/jquery/jrating/icons/stars.png', // path of the icon stars.png
-                smallStarsPath: M.cfg.wwwroot + '/theme/SAVIOTheme/jquery/jrating/icons/small.png', // path of the icon small.png
+                bigStarsPath: M.cfg.wwwroot + '/theme/saviotheme/jquery/jrating/icons/stars.png', // path of the icon stars.png
+                smallStarsPath: M.cfg.wwwroot + '/theme/saviotheme/jquery/jrating/icons/small.png', // path of the icon small.png
                 nbRates: 5,
                 rateMax: 5,
                 decimalLength: 1,
@@ -410,12 +410,12 @@ SAVIOTheme.load_feedback_form = function () {
  * Remove feedback form form page
  * @returns void
  */
-SAVIOTheme.remove_feedback = function () {
+saviotheme.remove_feedback = function () {
     $("#feedback_wrap").remove();
 };
 
 
-SAVIOTheme.show_nav_course_affix = function(Y,format){
+saviotheme.show_nav_course_affix = function(Y,format){
     var CSS = {
         COURSECONTENT : 'course-content',
         section_node : 'li',
@@ -492,7 +492,7 @@ SAVIOTheme.show_nav_course_affix = function(Y,format){
  * Ready document handle
  */
 $(document).ready(function() {
-    SAVIOTheme.init();
+    saviotheme.init();
     //$("html").niceScroll({cursorwidth:'10',cursorborderradius: '0', scrollspeed: '40' });
     $(".block_mycourses:not(.grouping_categories) .content").niceScroll({cursorwidth:'8',cursorborderradius: '0',scrollspeed: '10', autohidemode: false, cursoropacitymin: 1 });
     $("div[id^='ascrail']").show();

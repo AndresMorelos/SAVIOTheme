@@ -63,7 +63,7 @@ if($hasnotifications){
     if(!is_number($timenotifacation) ){
         $timenotifacation = 60000;
     }
-    SAVIOTheme_init_notifications($timenotifacation);
+    saviotheme_init_notifications($timenotifacation);
 }
 
 

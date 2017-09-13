@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        $showrate = false; 
     }
 ?>
-    <form method="POST" action="<?php echo $CFG->wwwroot . "/theme/SAVIOTheme/feedback.php" ?>" class="ajax-form">
+    <form method="POST" action="<?php echo $CFG->wwwroot . "/theme/saviotheme/feedback.php" ?>" class="ajax-form">
         <?php if($showrate): ?>
         <div class="form-group">
             <label for=""><?php echo get_string("feedback_rate", "theme_saviotheme") ?></label>
@@ -76,6 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php
     
     if(  is_siteadmin() ){
-        echo "<a class='btn btn-primary' href='".$CFG->wwwroot."/theme/SAVIOTheme/feedback_overview.php'>".get_string("feedback_overview", "theme_saviotheme")."</a>";
+        echo "<a class='btn btn-primary' href='".$CFG->wwwroot."/theme/saviotheme/feedback_overview.php'>".get_string("feedback_overview", "theme_saviotheme")."</a>";
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-$THEME->name = 'SAVIOTheme';
+$THEME->name = 'saviotheme';
 $THEME->parents = array('bootstrapbase');
 
 $THEME->doctype = 'html5';
@@ -127,7 +127,7 @@ $THEME->layouts = array(
 );
 
 $THEME->javascripts = array(
-    'lib/waves_min','SAVIOTheme'
+    'lib/waves_min','saviotheme'
 );
 
 $THEME->blockrtlmanipulations = array(

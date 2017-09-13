@@ -9,7 +9,7 @@
 require_once '../../config.php';
 
 $PAGE->set_context(context_system::instance());
-$PAGE->set_url('/theme/SAVIOTheme/feedback_overview.php');
+$PAGE->set_url('/theme/saviotheme/feedback_overview.php');
 $title = get_string('feedback_overview', 'theme_saviotheme');
 $PAGE->set_pagelayout('print');
 $PAGE->set_title($title);

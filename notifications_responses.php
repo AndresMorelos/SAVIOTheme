@@ -7,7 +7,7 @@ $response = array( "success"=>"false","message"=>"","data"=>array(),"time"=>0 );
 $ntime = $_REQUEST["ntime"];
 if($ntime == 0){$ntime  = null;}//Init request
 
-$notification = SAVIOTheme_get_notifications($ntime);
+$notification = saviotheme_get_notifications($ntime);
 
 //Set time
 $response["time"] = time();

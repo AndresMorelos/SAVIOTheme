@@ -29,7 +29,7 @@ function theme_saviotheme_course_nav(moodle_page $page) {
         $format = 'format_'.$courseformat->get_format();
         $page->requires->strings_for_js(array('sectionname'),$format);
         $page->requires->strings_for_js(array('goto'),'theme_saviotheme');
-        $page->requires->js_init_call('SAVIOTheme.show_nav_course_affix', array($format));
+        $page->requires->js_init_call('saviotheme.show_nav_course_affix', array($format));
     }
 }
 
@@ -40,7 +40,7 @@ function theme_saviotheme_course_nav(moodle_page $page) {
  * @return array
  */
 
-function SAVIOTheme_bootstrap_grid($hassidepost) {
+function saviotheme_bootstrap_grid($hassidepost) {
     if (!$hassidepost) {
         $regions = array('content' => 'span12');
     } else {
@@ -113,7 +113,7 @@ function theme_saviotheme_set_logo($css, $logo) {
 /*
 function theme_saviotheme_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage')) {
-        $theme = theme_config::load('SAVIOTheme');
+        $theme = theme_config::load('saviotheme');
         return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
     } else {
         send_file_not_found();
@@ -165,19 +165,19 @@ function theme_saviotheme_set_customcss($css, $customcss) {
  * @return null
  */
 
-function SAVIOTheme_init_notifications($time_request) {
+function saviotheme_init_notifications($time_request) {
     global $PAGE, $CFG;
     if (!isloggedin() || isguestuser()) {
         return;
     }
-    $url = $CFG->wwwroot . '/theme/SAVIOTheme/notifications_responses.php';
+    $url = $CFG->wwwroot . '/theme/saviotheme/notifications_responses.php';
     $page_noallow_view = array(
         "page-mod-quiz-attempt"
     );
     //$this->content->text = $PAGE->bodyid;
 
     if (!in_array($PAGE->bodyid, $page_noallow_view)) {
-        $PAGE->requires->js_init_call('SAVIOTheme.notification_init', array($url,$time_request));
+        $PAGE->requires->js_init_call('saviotheme.notification_init', array($url,$time_request));
     }
 }
 
@@ -190,7 +190,7 @@ function SAVIOTheme_init_notifications($time_request) {
  * @param type $lasttime
  * @return array
  */
-function SAVIOTheme_get_notifications($lasttime){
+function saviotheme_get_notifications($lasttime){
     global $CFG,$PAGE,$USER;
 
      if (!isloggedin() || isguestuser()) {
@@ -201,9 +201,9 @@ function SAVIOTheme_get_notifications($lasttime){
     require_once($CFG->dirroot . '/course/lib.php');
     $courses = enrol_get_my_courses( );
     $data = array(
-        "upcoming"=>SAVIOTheme_get_upcomming($lasttime),
-        "event"=>SAVIOTheme_get_events($courses,$lasttime),
-        "message"=>SAVIOTheme_get_user_messages($lasttime),
+        "upcoming"=>saviotheme_get_upcomming($lasttime),
+        "event"=>saviotheme_get_events($courses,$lasttime),
+        "message"=>saviotheme_get_user_messages($lasttime),
     );
     return $data;
 
@@ -220,7 +220,7 @@ function SAVIOTheme_get_notifications($lasttime){
  * @return array
  */
 
-function SAVIOTheme_get_user_messages($time=null) {
+function saviotheme_get_user_messages($time=null) {
     global $USER, $DB, $CFG, $OUTPUT;
     $data = array(
         "total_messages" => 0,
@@ -338,7 +338,7 @@ function SAVIOTheme_get_user_messages($time=null) {
  *
  * @return array
  */
-function SAVIOTheme_get_upcomming($time=0) {
+function saviotheme_get_upcomming($time=0) {
     global $USER, $CFG, $SESSION;
     $data = array("upcomings"=>array(), "new_unread"=>0);
     require_once($CFG->dirroot . '/calendar/lib.php');
@@ -401,7 +401,7 @@ function SAVIOTheme_get_upcomming($time=0) {
  * @param type $timestart
  * @return array
  */
-function SAVIOTheme_get_events($courses,$timestart) {
+function saviotheme_get_events($courses,$timestart) {
 
     global $CFG, $USER, $DB, $OUTPUT;
 

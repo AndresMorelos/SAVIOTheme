@@ -29,7 +29,7 @@ if (right_to_left()) {
 
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
 $knownsidepre = $PAGE->blocks->is_known_region('side-pre');
-$regions = SAVIOTheme_bootstrap_grid($hassidepost);
+$regions = saviotheme_bootstrap_grid($hassidepost);
 
 echo $OUTPUT->doctype()
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-$string['configtitle'] = 'SAVIOTheme';
+$string['configtitle'] = 'saviotheme';
 $string['contentbackground'] = 'Main content background colour';
 $string['contentbackground_desc'] = 'The background colour of the main content of the site, leave empty for none.';
 
