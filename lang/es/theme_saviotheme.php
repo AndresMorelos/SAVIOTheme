@@ -46,3 +46,4 @@ $string['feedback_return']="Volver al formulario";
 
 
 $string['gotocourse'] = 'Ir al curso';
+$string['lastaccesscourse'] = 'Ultimo acceso';

@@ -118,7 +118,7 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
 
                 $html .= html_writer::start_tag('div', array('class' => 'course_extra_info'));
 
-                $html .= html_writer::tag('h2', html_writer::link($courseurl, get_string('gotocourse', 'saviotheme')));
+                $html .= html_writer::tag('h2', html_writer::link($courseurl, get_string('gotocourse', 'theme_saviotheme')));
                 $html .= html_writer::start_tag('div', array('class' => 'option-course-info'));
 
                 // display course contacts. See course_in_list::get_course_contacts()
@@ -158,7 +158,7 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
                                 "data-content" => str_replace("\"", "'", $lastaccess),
                                 "data-placement" => "top",
                                 "data-container" => ".course_list",
-                                "data-title" => get_string('lastaccesscourse', 'saviotheme')
+                                "data-title" => get_string('lastaccesscourse', 'theme_saviotheme')
                                     )
                     );
                 }

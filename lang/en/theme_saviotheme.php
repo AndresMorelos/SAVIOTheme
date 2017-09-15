@@ -150,3 +150,4 @@ $string['feedback_return']="Return to feedback form";
 
 
 $string['gotocourse'] = 'Go to course';
+$string['lastaccesscourse'] = 'Last access';
