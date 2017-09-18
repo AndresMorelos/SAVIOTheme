@@ -114,7 +114,9 @@ $string['inthecourse'] = 'in the course';
 
 $string['usergreeting'] = 'Hi {$a}!';
 
+$string['gotocourse'] = 'Go to the course';
 $string['goto'] = 'Go to...';
+$string['lastaccesscourse'] = 'Last access';
 
 $string['mydashboard'] = 'My Dashboard';
 $string['edit_cover'] = 'Edit cover image';
@@ -147,6 +149,3 @@ $string['feedback_required']="<h2>Please, share your comments.</h2>";
 $string['feedback_error']="<h2>Upps, something went wrong. Try it again.</h2>";
 $string['feedback_close']="Close";
 $string['feedback_return']="Return to feedback form";
-
-$string['gotocourse'] = "Go to course";
-$string['lastaccesscourse'] = "Last access";

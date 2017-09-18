@@ -20,7 +20,9 @@ $string['inthecourse'] = 'en el curso';
 
 $string['usergreeting'] = 'Hola {$a}!';
 
+$string['gotocourse'] = 'Ir al curso';
 $string['goto'] = 'Ir a ...';
+$string['lastaccesscourse'] = 'Ultimo acceso';
 
 $string['mydashboard'] = 'Mi área personal';
 $string['edit_cover'] = 'Editar imagen de portada';
@@ -43,7 +45,3 @@ $string['feedback_required']="<h2>Por favor deja tu comentario.</h2>";
 $string['feedback_error']="<h2>Upps, algo salió mal. Intentalo nuevamente.</h2>";
 $string['feedback_close']="Cerrar";
 $string['feedback_return']="Volver al formulario";
-
-
-$string['gotocourse'] = "Ir al curso";
-$string['lastaccesscourse'] = "Ultimo acceso";
