@@ -45,5 +45,5 @@ $string['feedback_close']="Cerrar";
 $string['feedback_return']="Volver al formulario";
 
 
-$string['gotocourse'] = 'Ir al curso';
-$string['lastaccesscourse'] = 'Ultimo acceso';
+$string['gotocourse'] = "Ir al curso";
+$string['lastaccesscourse'] = "Ultimo acceso";

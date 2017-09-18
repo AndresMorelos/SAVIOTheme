@@ -148,6 +148,5 @@ $string['feedback_error']="<h2>Upps, something went wrong. Try it again.</h2>";
 $string['feedback_close']="Close";
 $string['feedback_return']="Return to feedback form";
 
-
-$string['gotocourse'] = 'Go to course';
-$string['lastaccesscourse'] = 'Last access';
+$string['gotocourse'] = "Go to course";
+$string['lastaccesscourse'] = "Last access";
