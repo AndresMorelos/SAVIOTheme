@@ -118,8 +118,8 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
 
                 $html .= html_writer::start_tag('div', array('class' => 'course_extra_info'));
 
-                if (get_string_manager()->string_exists('gotocourse','theme_saviotheme')) {
-                  $html .= html_writer::tag('h2', html_writer::link($courseurl, get_string('gotocourse', 'theme_saviotheme') ));
+                if (get_string_manager()->string_exists('goto','theme_saviotheme')) {
+                  $html .= html_writer::tag('h2', html_writer::link($courseurl, get_string('goto', 'theme_saviotheme') ));
                 }else {
                   $html .= html_writer::tag('h2', html_writer::link($courseurl, "No existe" ));
                 }
