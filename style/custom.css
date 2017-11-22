@@ -45,7 +45,7 @@ a.logo {
 .edit_cover{
     left: calc(100% - 125px);
     position: relative;
-    top: -145px;
+    top: 45px;
     z-index: 10;
 }
 

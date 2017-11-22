@@ -5,7 +5,7 @@ $THEME->parents = array('bootstrapbase');
 
 $THEME->doctype = 'html5';
 $THEME->sheets = array('fonts','font-awesome','moodle','waves_min','custom');
-$THEME->parents_exclude_sheets = array('bootstrapbase' => array('moodle'));
+$THEME->parents_exclude_sheets = array('bootstrapbasesavio' => array('moodle'));
 
 $THEME->supportscssoptimisation = false;
 
