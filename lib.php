@@ -9,7 +9,6 @@
 function theme_saviotheme_page_init(moodle_page $page) {
     $page->requires->jquery_plugin('fitvids', 'theme_saviotheme');
     $page->requires->jquery_plugin('modernizr', 'theme_saviotheme');
-    $page->requires->jquery_plugin('nicescroll', 'theme_saviotheme');
     if( SITEID != $page->course->id ){
         $courseformat = course_get_format( $page->course);
         $page->requires->strings_for_js(array('sectionname'),'format_'.$courseformat->get_format());
