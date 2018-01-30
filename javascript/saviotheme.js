@@ -425,7 +425,7 @@ SAVIOTHEME.show_nav_course_affix = function(Y,format){
     };
 
     var sectionlist = $('.'+CSS.COURSECONTENT+' '+CSS.section_node+'.section');
-    var size = sectionlist.size();
+    var size = sectionlist.length;
 
     if(size <= 0)
         return;
