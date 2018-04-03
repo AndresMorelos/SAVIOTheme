@@ -494,6 +494,12 @@ SAVIOTHEME.show_nav_course_affix = function(Y,format){
 $(document).ready(function() {
     SAVIOTHEME.init();
     //$("html").niceScroll({cursorwidth:'10',cursorborderradius: '0', scrollspeed: '40' });
-    $(".block_mycourses:not(.grouping_categories) .content").niceScroll({cursorwidth:'8',cursorborderradius: '0',scrollspeed: '10', autohidemode: false, cursoropacitymin: 1 });
+    //$(".block_mycourses:not(.grouping_categories) .content").niceScroll({cursorwidth:'8',cursorborderradius: '0',scrollspeed: '10', autohidemode: false, cursoropacitymin: 1 });
     $("div[id^='ascrail']").show();
+    $('.wrap-categorybox').click(function () {
+  	if($('.open').length >= 1) {
+    		$('.open').removeClass('open');
+  	}
+  	$('.content').animate({scrollTop: "0px"});
+    });
 });
