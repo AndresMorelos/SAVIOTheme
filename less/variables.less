@@ -1,0 +1,83 @@
+
+@main_color: #333;
+@main_color_heading: #2A7D4E;
+@block_header_color: #fff;
+
+
+@bodyBackground:        #edecec;
+
+// Buttons
+// -------------------------
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         #ccc;
+
+@btnPrimaryBackground:              #2196f3;
+@btnPrimaryBackgroundHighlight:     #2196f3;
+
+@btnInfoBackground:                 #00bcd4;
+@btnInfoBackgroundHighlight:        #00bcd4;
+
+@btnSuccessBackground:              #4caf50;
+@btnSuccessBackgroundHighlight:     #4caf50;
+
+@btnWarningBackground:              #ff9800;
+@btnWarningBackgroundHighlight:     #ff9800;
+
+@btnDangerBackground:               #f44336;
+@btnDangerBackgroundHighlight:      #f44336;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @grayDarker;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+@sansFontFamily:        "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@baseFontSize:          14px;
+@wellBackground: #fff;
+@baseBorderRadius: 5;
+@linkColor:             @main_color_heading;
+@linkColorHover:        darken(@linkColor, 15%);
+@textColor:            @main_color;
+@headingsColor: @main_color_heading;
+
+
+//
+// Inverted navbar
+@navbarInverseBackground:                #111111;
+@navbarInverseBackgroundHighlight:       #222222;
+@navbarInverseBorder:                    #252525;
+
+@navbarLinkColorHover:                  #fff;
+@navbarLinkColorActive:                 #fff;
+
+@navbarInverseText:                      #fff;
+@navbarInverseLinkColor:                 #fff;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           #fff;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         70px;
+@gridGutterWidth:         10px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     85px;
+@gridGutterWidth1200:     15px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      52px;
+@gridGutterWidth768:      10px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));

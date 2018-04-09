@@ -1,0 +1,421 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/06/2015, 08:11:05 AM
+    Author     : erick
+*/
+
+#side-pre-wrap{
+    position: absolute;
+    z-index: 99998;
+    max-width: 80px;
+    left: 0;
+    -webkit-transition: left 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &.affix{
+        position: fixed;
+        top: 0px;
+    }
+}
+
+
+#btn-sidebar-hide, #btn-sidebar-show{
+        cursor: pointer;
+        left: -58px;
+        width: 36px;
+        height: 36px;
+        top: 10px;
+        position: absolute;
+        -webkit-transition: left 0.3s ease-in-out;
+        -moz-transition: left 0.3s ease-in-out;
+        -ms-transition: left 0.3s ease-in-out;
+        -o-transition: left 0.3s ease-in-out;
+        transition: left 0.3s ease-in-out;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+}
+
+body.editing {
+    #block-region-side-pre{
+        border: 3px dashed #D8D8D8;
+        border-left: none;
+        min-width: 40px;
+        .block .yui3-dd-dragging{
+            /*width: 60px;*/
+        }
+    }
+}
+
+body.editing #block-region-side-pre .block .moodle-actionmenu[data-enhanced].show .menu.align-tr-br{
+   left: 245px !important;
+    width: 245px !important;
+    top: 30px !important;
+}
+
+
+#block-region-side-pre{
+    top: 0;
+    bottom: 0;
+    position: relative;
+    padding: 65px 5px 65px 3px;
+    height: 100%;
+    .skip-block-to{
+        height: 0;
+    }
+    .asidebar-item-menu-wrap{
+        > .asidebar-item-menu-wrap-block{
+            display: none;
+            position: absolute;
+            left: 60px;
+            top: 0px;
+            z-index: 10000;
+
+            .block-internal{
+                width: 300px;
+                margin-bottom: 0px;
+                background: #fff;
+                -webkit-box-shadow: inherit;
+                -moz-box-shadow: none;
+                font-family: "Roboto";
+                border: 1px solid @main_color_heading;
+            }
+
+            &.active{
+                display:block;
+            }
+
+        }
+    }
+    .block.asidebar-item-menu-wrap{
+        position: relative;
+        background: none;
+        margin-bottom: 1px;
+        border: none;
+    }
+}
+
+/*.block.asidebar-item-menu-wrap{
+    position: relative;
+    background: none;
+    padding: 0;
+    margin-bottom: 1px;
+    border: none;
+}*/
+
+.asidebar-item-menu{
+    &.header{
+        width: 60px;
+        height: 60px;
+        display: block;
+        font-family: FontAwesome !important;
+        font-size: 2.5em;
+        margin: 0;
+        padding:  0 !important;
+        color: #fff;
+        background: @main_color_heading !important;
+        text-align: center;
+        line-height: 36px;
+        content: "\f0c9";
+        border-color: transparent !important;
+        cursor: pointer;
+        position: relative;
+        .border-radius(@baseBorderRadius);
+    }
+
+    &.open-tab{
+        background: #4d4d4d !important;
+        + .asidebar-item-menu-wrap-block{
+            display:block !important;
+        }
+    }
+
+    &:before {
+        content: "\f0c9";
+        vertical-align: middle;
+    }
+    
+}
+
+#block-region-side-post,.region-content, #block-region-side-middle,mm-block-region-side-post, .region-addons{
+    .asidebar-item-menu{
+        display: none;
+    }
+    .asidebar-item-menu-wrap-block{
+        display: block !important;
+    }
+}
+
+
+/******ICON****/
+
+.dir-rtl .collapsed .tree_item.branch:before { 
+    content: " \f053";
+}
+
+#side-pre-wrap span.block_news_items:before {
+    content:"\f0a1";
+}
+
+#side-pre-wrap span.block_navigation:before {
+    content:"\f0e8";
+}
+
+#side-pre-wrap span.block_calendar_upcoming:before{
+    content:"\f0f3";
+}
+#side-pre-wrap span.block_calendar_month:before {
+    content:"\f073";
+}
+
+#side-pre-wrap span.block_course_overview .coursebox {
+	border: 0px none;
+}
+
+#side-pre-wrap span.block_course_list:before {
+    content:"\f108";
+}
+
+#side-pre-wrap span.block_completionstatus:before,
+#side-pre-wrap span.block_selfcompletion:before {
+    content:"\f0e4";
+}
+
+#side-pre-wrap span.block_rss_client:before {
+    content:"\f09e";
+}
+
+#side-pre-wrap span.block.clock:before , #side-pre-wrap span.block#mod_quiz_navblock:before {
+    content:"\f017";
+}
+
+#side-pre-wrap span.block_blog_menu:before {
+    content:"\f02d";
+}
+
+#side-pre-wrap span.block_quiz_results:before {
+    content:"\f080";
+}
+
+#side-pre-wrap span.block_quiz_navblock:before {
+    content:"\f126";
+}
+
+#side-pre-wrap span.block_glossary_random:before {
+    content:"\f0eb";
+}
+
+#side-pre-wrap span.block_book_toc:before {
+    content:"\f02d";
+}
+
+
+#side-pre-wrap span.block_participants:before{
+    content:"\f0c0";
+}
+#side-pre-wrap span.block_online_users:before {
+    content:"\f0ac";
+}
+
+#side-pre-wrap span.block_html:before {
+    content:"\f022";
+}
+
+#side-pre-wrap span.block_section_links:before {
+    content:"\f02e";
+}
+
+#side-pre-wrap span.block_activity_modules:before {
+    content:"\f12e";
+}
+
+#side-pre-wrap span.block_comments:before {
+    content:"\f075";
+}
+
+
+#side-pre-wrap span.block_settings:before {
+    font-family: FontAwesome;
+    content:"\f085";
+}
+#side-pre-wrap span.block_savio3_tour:before {
+    content:"\f135";
+}
+
+#side-pre-wrap span.block_admin_bookmarks:before{
+    content:"\f02e";
+}
+
+#side-pre-wrap span.block_blog_tags:before,
+#side-pre-wrap span.block_tags:before {
+    content:"\f02c";
+}
+
+#side-pre-wrap span.block_private_files:before {
+    content:"\f07b";
+}
+
+#side-pre-wrap span.block_block_mentees:before {
+    content:"\f0c0";
+}
+
+#side-pre-wrap span.block_messages:before {
+    content:"\f0e0";
+}
+
+#side-pre-wrap span.block_community:before {
+    content:"\f0ac";
+}
+
+#side-pre-wrap span.block_login:before {
+    content:"\f007";
+}
+
+#side-pre-wrap span.block_recent_activity:before {
+    content:"\f017";
+}
+
+#side-pre-wrap span.block_search_forums:before {
+    content:"\f0e6";
+}
+
+#side-pre-wrap span.block_myprofile:before {
+    content:"\f007";
+}
+
+#side-pre-wrap span.block_adminblock:before {
+    content:"\f009";
+}
+
+#side-pre-wrap span.block_feedback:before {
+    content:"\f087";
+}
+
+#side-pre-wrap span.block_flickr:before {
+    content:"\f03e";
+}
+
+#side-pre-wrap span.block_youtube:before {
+    content:"\f145";
+}
+
+#side-pre-wrap span.block_course_badges:before {
+    content:"\f091";
+}
+
+#side-pre-wrap span.block_twitter_search:before {
+    content:"\f099";
+}
+
+#side-pre-wrap span.block_dashboardcourses:before {
+    content:"\f109";
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+
+}
+
+@media (max-width: 1024px){
+    #btn-sidebar-show{
+        left: -20px;
+    }
+
+    #btn-sidebar-hide{
+        left: -58px;
+    }
+
+    .active-sidebar {
+
+        #side-pre-wrap{
+            left: 0px;
+        }
+
+        #btn-sidebar-show{
+                left: -58px;
+        }
+
+        #btn-sidebar-hide{
+            left: -20px;
+        }
+        
+    }
+    #side-pre-wrap{
+        position: fixed;
+        left: -80px;
+        background-color: #edecec;
+        top: 200px;
+        -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+
+        
+        #block-region-side-pre{
+            padding-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+
+}
+
+@media (max-width: 1280px) and (min-width: 1024px){
+    .asidebar-item-menu.header{
+        font-size: 24px;
+        line-height: 24px;
+        width:40px; 
+        height: 40px
+    }
+    #block-region-side-pre .asidebar-item-menu-wrap > .asidebar-item-menu-wrap-block{
+        left: 40px;
+    }
+}
+
+/*
+@media (max-width: 1280px){
+    
+    body.editing .asidebar-item-menu.header{
+        width: 40px;
+        height: 40px;
+    }
+    body.editing #block-region-side-pre{
+        min-width: 40px;
+    }
+    .asidebar-item-menu.header{
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+        line-height: 16px;
+        padding: 10px 6px !important;
+    }
+    
+}
+
+@media (max-width: 1024px){
+    body.editing .asidebar-item-menu.header{
+        width: 30px;
+        height: 30px;
+    }
+    body.editing #block-region-side-pre{
+        min-width: 30px;
+    }
+    
+    .asidebar-item-menu.header{
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+        line-height: 16px;
+        padding: 7px 6px !important;
+    }
+    #block-region-side-pre .asidebar-item-menu-wrap > .asidebar-item-menu-wrap-block{
+        left: 30px;
+    }
+}
+
+*/
