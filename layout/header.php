@@ -6,11 +6,8 @@
                 <span id="btn-sidebar-hide"><i class="fa fa-arrow-left"></i></span>
 
                 <div id="logo" class="site-logo brand">
-<<<<<<< HEAD
                     <a title="<?php echo $SITE->fullname; ?>" href="<?php echo $CFG->wwwroot; ?>" class=""><img src="<?php echo $OUTPUT->image_url('logoutb', 'theme') ?>" role="presentation" alt="Universidad Tecnológica de Bolívar"></a>
-=======
-                    <a title="<?php echo $SITE->fullname; ?>" href="<?php echo $CFG->wwwroot; ?>" class=""><img src="<?php echo $OUTPUT->pix_url('logoutb', 'theme') ?>" role="presentation" alt="Universidad Tecnológica de Bolívar"></a>
->>>>>>> e95f554104d20864aa70003845545ad38399c303
+
                 </div>
                 <div id="name-and-slogan">
                     <a title="<?php echo $SITE->fullname; ?>" href="<?php echo $CFG->wwwroot; ?>" class=""><?php echo $SITE->fullname; ?></a>

@@ -50,11 +50,9 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
 
                 $moveurl = new moodle_url('/blocks/course_overview/move.php', array('sesskey' => sesskey(), 'moveto' => 0, 'courseid' => $movingcourseid));
                 // Create move icon, so it can be used.
-<<<<<<< HEAD
+
                 $movetofirsticon = html_writer::empty_tag('img', array('src' => $this->output->image_url('movehere'),
-=======
-                $movetofirsticon = html_writer::empty_tag('img', array('src' => $this->output->pix_url('movehere'),
->>>>>>> e95f554104d20864aa70003845545ad38399c303
+
                             'alt' => get_string('movetofirst', 'block_course_overview', $courses[$movingcourseid]->fullname),
                             'title' => get_string('movehere')));
                 $moveurl = html_writer::link($moveurl, $movetofirsticon);
@@ -93,11 +91,9 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
                 $html .= html_writer::start_tag('div', array('class' => 'course_title'));
                 // If user is editing, then add move icons.
                 if ($userediting && !$ismovingcourse) {
-<<<<<<< HEAD
+
                     $moveicon = html_writer::empty_tag('img', array('src' => $this->image_url('t/move')->out(false),
-=======
-                    $moveicon = html_writer::empty_tag('img', array('src' => $this->pix_url('t/move')->out(false),
->>>>>>> e95f554104d20864aa70003845545ad38399c303
+
                                 'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
                                 'title' => get_string('move')));
                     $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
@@ -182,11 +178,9 @@ if (file_exists("$CFG->dirroot/blocks/course_overview/renderer.php")) {
                     $a = new stdClass();
                     $a->movingcoursename = $courses[$movingcourseid]->fullname;
                     $a->currentcoursename = $course->fullname;
-<<<<<<< HEAD
+
                     $movehereicon = html_writer::empty_tag('img', array('src' => $this->output->image_url('movehere'),
-=======
-                    $movehereicon = html_writer::empty_tag('img', array('src' => $this->output->pix_url('movehere'),
->>>>>>> e95f554104d20864aa70003845545ad38399c303
+
                                 'alt' => get_string('moveafterhere', 'block_course_overview', $a),
                                 'title' => get_string('movehere')));
                     $moveurl = html_writer::link($moveurl, $movehereicon);
