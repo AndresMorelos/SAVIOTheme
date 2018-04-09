@@ -37,7 +37,11 @@
  */
 
 $plugins = array(
+<<<<<<< HEAD
     'fitvids'	=> array('files' => array('fitvid.js')),
+=======
+    'fitvids'	=> array('files' => array('fitvids.js')),
+>>>>>>> e95f554104d20864aa70003845545ad38399c303
     'modernizr'     => array('files' => array('modernizr.js')),
     'nicescroll' => array('files' => array('nicescroll_min.js')),
 );

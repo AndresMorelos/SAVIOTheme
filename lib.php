@@ -476,7 +476,11 @@ function saviotheme_get_events($courses,$timestart) {
                                     'id'=>$log->courseid,
                                     'fullname'=>$courses_array[$log->courseid]->fullname
                                 ),
+<<<<<<< HEAD
                                 'icon'=>$OUTPUT->image_url('icon', $cm->modname). '');
+=======
+                                'icon'=>$OUTPUT->pix_url('icon', $cm->modname). '');
+>>>>>>> e95f554104d20864aa70003845545ad38399c303
                         }//Update
                         else{
                             $strupdated = get_string('updated', 'theme_saviotheme');
@@ -485,7 +489,11 @@ function saviotheme_get_events($courses,$timestart) {
                                                             'id'=>$log->courseid,
                                                             'fullname'=>$courses_array[$log->courseid]->fullname
                                                         ),
+<<<<<<< HEAD
                                     'icon'=>$OUTPUT->image_url('icon', $cm->modname). '' );
+=======
+                                    'icon'=>$OUTPUT->pix_url('icon', $cm->modname). '' );
+>>>>>>> e95f554104d20864aa70003845545ad38399c303
 
                         }
                     }

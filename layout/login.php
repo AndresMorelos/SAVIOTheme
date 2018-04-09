@@ -43,7 +43,11 @@ if (count($videos)) {
 } else {
     $videos[] = array(
         "path" => '',
+<<<<<<< HEAD
         "image" => $OUTPUT->image_url('default_bg_login', 'theme')
+=======
+        "image" => $OUTPUT->pix_url('default_bg_login', 'theme')
+>>>>>>> e95f554104d20864aa70003845545ad38399c303
     );
 }
 
@@ -92,7 +96,11 @@ echo $OUTPUT->doctype()
                         <div class="login-wrapper">
                             <div class="login-logo" >
                                 <div id="logo" class="site-logo"> 
+<<<<<<< HEAD
                                     <a title="<?php echo $SITE->fullname; ?>" href="<?php echo $CFG->wwwroot; ?>" class=""><img src="<?php echo $OUTPUT->image_url('logoutb_green', 'theme') ?>" role="presentation" alt="Universidad Tecnológica de Bolívar"></a>
+=======
+                                    <a title="<?php echo $SITE->fullname; ?>" href="<?php echo $CFG->wwwroot; ?>" class=""><img src="<?php echo $OUTPUT->pix_url('logoutb_green', 'theme') ?>" role="presentation" alt="Universidad Tecnológica de Bolívar"></a>
+>>>>>>> e95f554104d20864aa70003845545ad38399c303
                                 </div>
                                 <div id="name-and-slogan">
                                     <a title="<?php echo $SITE->fullname; ?>" href="<?php echo $CFG->wwwroot; ?>" class=""><?php echo $SITE->fullname; ?></a>

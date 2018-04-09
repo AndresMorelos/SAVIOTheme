@@ -72,7 +72,11 @@ class theme_saviotheme_core_renderer extends core_renderer {
      * theme settings page.
      */
 
+<<<<<<< HEAD
     public function user_menu($user= null, $withlinks=null) {
+=======
+    public function user_menu() {
+>>>>>>> e95f554104d20864aa70003845545ad38399c303
         global $CFG;
         $usermenu = new custom_menu('', current_language());
         return $this->render_user_menu($usermenu);
