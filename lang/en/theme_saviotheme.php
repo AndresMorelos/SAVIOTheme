@@ -46,7 +46,11 @@ $string['videologinimage'] = 'URL Image cover while load video';
 $string['videologinimage_desc'] = '';
 
 
-
+$string['mycourses']="My courses";
+$string['library']="Library";
+$string['manuals']="Manuals";
+$string['manuals_student']="Student's Manual";
+$string['manuals_professor']="Professor's Manual";
 
 /* Banners */
 

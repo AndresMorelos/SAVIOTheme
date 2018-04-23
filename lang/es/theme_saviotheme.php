@@ -1,4 +1,12 @@
 <?php
+$string['gotocourse'] = 'Ir al curso';
+$string['mycourses']="Mis Cursos";
+$string['library']="Biblioteca";
+
+$string['manuals']="Manuales";
+$string['manuals_student']="Manual de Estudiante";
+$string['manuals_professor']="Manual de Docente";
+
 $string['backtotop'] = 'Ir arriba';
 $string['nextsection'] = 'Siguiente sección';
 $string['previoussection'] = 'Sección anterior';
@@ -43,6 +51,3 @@ $string['feedback_required']="<h2>Por favor deja tu comentario.</h2>";
 $string['feedback_error']="<h2>Upps, algo salió mal. Intentalo nuevamente.</h2>";
 $string['feedback_close']="Cerrar";
 $string['feedback_return']="Volver al formulario";
-
-
-$string['gotocourse'] = 'Ir al curso';
