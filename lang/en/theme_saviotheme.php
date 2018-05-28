@@ -46,7 +46,12 @@ $string['videologinimage'] = 'URL Image cover while load video';
 $string['videologinimage_desc'] = '';
 
 
-
+$string['mycourses']="My courses";
+$string['library']="Library";
+$string['manuals']="Manuals";
+$string['manuals_student']="Student's Manual";
+$string['manuals_professor']="Professor's Manual";
+$string['digresoucers'] = "Digital Resources";
 
 /* Banners */
 
@@ -114,9 +119,7 @@ $string['inthecourse'] = 'in the course';
 
 $string['usergreeting'] = 'Hi {$a}!';
 
-$string['gotocourse'] = 'Go to the course';
 $string['goto'] = 'Go to...';
-$string['lastaccesscourse'] = 'Last access';
 
 $string['mydashboard'] = 'My Dashboard';
 $string['edit_cover'] = 'Edit cover image';

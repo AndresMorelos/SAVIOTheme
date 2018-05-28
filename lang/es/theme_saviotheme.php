@@ -1,4 +1,13 @@
 <?php
+$string['gotocourse'] = 'Ir al curso';
+$string['mycourses']="Mis Cursos";
+$string['library']="Biblioteca";
+
+$string['manuals']="Manuales";
+$string['manuals_student']="Manual de Estudiante";
+$string['manuals_professor']="Manual de Docente";
+$string['digresoucers'] = "Recursos Digitales";
+
 $string['backtotop'] = 'Ir arriba';
 $string['nextsection'] = 'Siguiente sección';
 $string['previoussection'] = 'Sección anterior';
@@ -20,9 +29,7 @@ $string['inthecourse'] = 'en el curso';
 
 $string['usergreeting'] = 'Hola {$a}!';
 
-$string['gotocourse'] = 'Ir al curso';
 $string['goto'] = 'Ir a ...';
-$string['lastaccesscourse'] = 'Ultimo acceso';
 
 $string['mydashboard'] = 'Mi área personal';
 $string['edit_cover'] = 'Editar imagen de portada';

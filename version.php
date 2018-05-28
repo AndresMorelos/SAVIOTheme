@@ -2,7 +2,7 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2017091300;
+$plugin->version   = 2018052902;
 $plugin->requires  = 2016120505;
 $plugin->component = 'theme_saviotheme';
 $plugin->dependencies = array(

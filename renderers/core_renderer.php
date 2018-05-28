@@ -63,6 +63,7 @@ class theme_saviotheme_core_renderer extends core_renderer {
             $custommenuitems = $CFG->custommenuitems;
         }
         $custommenu = new custom_menu($custommenuitems, current_language());
+
         return $this->render_custom_menu($custommenu);
     }
 
@@ -72,7 +73,8 @@ class theme_saviotheme_core_renderer extends core_renderer {
      * theme settings page.
      */
 
-    public function user_menu() {
+    public function user_menu($user= null, $withlinks=null) {
+
         global $CFG;
         $usermenu = new custom_menu('', current_language());
         return $this->render_user_menu($usermenu);
@@ -87,24 +89,45 @@ class theme_saviotheme_core_renderer extends core_renderer {
     protected function render_custom_menu(custom_menu $menu) {
         global $CFG;
 
-        // TODO: eliminate this duplicated logic, it belongs in core, not
-        // here. See MDL-39565.
-        $addlangmenu = false;
-        $langs = get_string_manager()->get_list_of_translations();
-        if (count($langs) < 2
-                or empty($CFG->langmenu)
-                or ( $this->page->course != SITEID and ! empty($this->page->course->lang))) {
-            $addlangmenu = false;
-        }
+        $mycourses = $this->page->navigation->get('mycourses');
 
-        if (!$menu->has_children() && $addlangmenu === false) {
-            return '';
-        }
+        if (isloggedin() && $mycourses && $mycourses->has_children()) {
+            // Libary
+            $libraylabel = get_string('library', 'theme_saviotheme');
+            $libraryurl = new moodle_url('http://bibliotecas.utb.edu.co/');
+            $librarytitle = $libraylabel;
+            $librarysort = 10000;
 
-        if ($addlangmenu) {
-            $this->language = $menu->add(get_string('language'), new moodle_url('#'), $strlang, 10000);
-            foreach ($langs as $langtype => $langname) {
-                $this->language->add($langname, new moodle_url($this->page->url, array('lang' => $langtype)), $langname);
+            $this->library = $menu->add($libraylabel,$libraryurl,$librarytitle,$librarysort);
+
+            // Manuals
+            $manuallabel = get_string('manuals', 'theme_saviotheme');
+            $manualurl = new moodle_url('#');
+            $manualtitle = $manuallabel;
+            $manualsort = 10000;
+
+            $this->manual = $menu->add($manuallabel,$manualurl,$manualtitle,$manualsort);
+            $this->manual->add(get_string('manuals_student', 'theme_saviotheme'), new moodle_url('http://www.utbvirtual.edu.co/sites/utbvirtual.edu.co/files/Manual%20SAVIO%20Estudiantes%20v27.pdf'));
+            $this->manual->add(get_string('manuals_professor', 'theme_saviotheme'), new moodle_url('http://www.utbvirtual.edu.co/sites/utbvirtual.edu.co/files/Manual%20SAVIO%20Docentes%20v27_0.pdf'));
+
+            //Digital resources
+            $digitalresourcelabel = get_string('digresoucers', 'theme_saviotheme');
+            $digitalresourceurl = new moodle_url('http://www.utbvirtual.edu.co/recursos-digitales');
+            $digitalresourcetitle = $digitalresourcelabel;
+            $digitalresourcesort = 10000;
+
+            $this->digitalresource = $menu->add($digitalresourcelabel,$digitalresourceurl,$digitalresourcetitle,$digitalresourcesort);
+
+            // Courses
+            $branchlabel = get_string('mycourses');
+            $branchurl   = new moodle_url('/course/index.php');
+            $branchtitle = $branchlabel;
+            $branchsort  = 10000;
+
+            $this->branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
+
+            foreach ($mycourses->children as $coursenode) {
+                $this->branch->add($coursenode->get_content(), $coursenode->action, $coursenode->get_title());
             }
         }
 
@@ -114,6 +137,8 @@ class theme_saviotheme_core_renderer extends core_renderer {
         }
 
         return $content . '</ul>';
+
+
     }
 
     /*
@@ -135,6 +160,7 @@ class theme_saviotheme_core_renderer extends core_renderer {
             if ($menunode === $this->language) {
                 $class .= ' langmenu';
             }
+
             $content = html_writer::start_tag('li', array('class' => $class));
             // If the child has menus render it as a sub menu.
             $submenucount++;
@@ -144,7 +170,17 @@ class theme_saviotheme_core_renderer extends core_renderer {
                 $url = '#cm_submenu_' . $submenucount;
             }
             $content .= html_writer::start_tag('a', array('href' => $url, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'title' => $menunode->get_title(), 'role' => 'button','aria-haspopup'=>'true', 'aria-expanded' => 'false'     ));
-            $content .= $menunode->get_text();
+            if ($menunode === $this->branch) {
+              $content .= '<i class="fa fa-book"></i>'. $menunode->get_text();
+            }else if ($menunode === $this->library) {
+              $content .= '<i class="fa fa-bookmark"></i>'. $menunode->get_text();
+            }else if ($menunode === $this->manual) {
+              $content .= '<i class="fa fa-book"></i>'. $menunode->get_text();
+            }else if($menunode === $this->digitalresource){
+                $content .= '<i class="fa fa-bookmark"></i>'. $menunode->get_text();
+            }else{
+              $content .= $menunode->get_text();
+            }
             if ($level == 1) {
                 $content .= '<b class="caret"></b>';
             }
@@ -162,7 +198,15 @@ class theme_saviotheme_core_renderer extends core_renderer {
             } else {
                 $url = '#';
             }
-            $content .= html_writer::link($url, $menunode->get_text(), array('title' => $menunode->get_title()));
+
+            if ($menunode === $this->library) {
+              $content .= html_writer::link($url, '<i class="fa fa-bookmark"></i>'.$menunode->get_text(), array('title' => $menunode->get_title()));
+            }else if($menunode === $this->digitalresource){
+              $content .= html_writer::link($url, '<i class="fa fa-bookmark"></i>'.$menunode->get_text(), array('title' => $menunode->get_title()));
+            }else{
+              $content .= html_writer::link($url, $menunode->get_text(), array('title' => $menunode->get_title()));
+            }
+
         }
         return $content;
     }
@@ -421,6 +465,7 @@ class theme_saviotheme_core_renderer extends core_renderer {
         }
         return $content . '</ul>';
     }
+
 
     public function notification_menu() {
         if (isloggedin() && !isguestuser()) {

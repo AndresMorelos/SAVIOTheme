@@ -3,290 +3,346 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+
+
+/*
     Created on : 11/06/2015, 04:45:21 PM
     Author     : erick
 */
+
 body#page-login-index {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+
 /* @group Login */
+
 #page {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
+
 #page-login-index #region-main {
-  background: transparent;
-  border: 0px none;
-  margin: 50px 0 130px 0;
-  padding: 10px 0;
+    background: transparent;
+    border: 0px none;
+    margin: 50px 0 130px 0;
+    padding: 10px 0;
 }
+
 html.login-page {
-  height: 100%;
+    height: 100%;
 }
+
 .login-logo {
-  width: 100%;
-  float: left;
-  margin-bottom: 10px;
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
 }
+
 #logo {
-  background-size: contain;
-  border-right: 1px #ccc solid;
-  padding-right: 30px;
-  padding-top: 0;
-  padding-bottom: 0;
-  float: left;
+    background-size: contain;
+    border-right: 1px #ccc solid;
+    padding-right: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    float: left;
 }
+
 #name-and-slogan {
-  width: 35%;
-  margin-left: 20px;
-  padding-top: 5px;
-  float: left;
+    width: 35%;
+    margin-left: 20px;
+    padding-top: 5px;
+    float: left;
 }
+
 #name-and-slogan a {
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 18px;
-  color: #333;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
 }
+
 .loginpanel form {
-  width: 95%;
+    width: 95%;
 }
+
 .loginpanel h2 i,
 .signuppanel h2 i {
-  color: #999;
-  margin-right: 2px;
+    color: #999;
+    margin-right: 2px;
 }
+
 .signuppanel ol {
-  margin-left: 40px;
+    margin-left: 40px;
 }
+
 .loginbox.onecolumn {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  margin: 0;
-  padding: 0;
-  float: none;
-  width: auto;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0;
+    padding: 0;
+    float: none;
+    width: auto;
 }
+
 .loginbox .loginform .form-label,
 .loginbox .loginform .form-input {
-  width: 100%;
-  margin-bottom: 5px;
+    width: 100%;
+    margin-bottom: 5px;
 }
+
 .loginbox .loginform .form-label {
-  text-align: left;
+    text-align: left;
 }
+
 .loginbox .loginform .form-input input[type="text"],
 .loginbox .loginform .form-input input[type="password"] {
-  display: block;
-  height: 26px;
-  padding: 8px 12px;
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 1.428571429;
-  color: #333 !important;
-  background-color: rgba(255, 255, 255, 0.55) !important;
-  background-image: none;
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  width: 100%;
-  text-align: center;
+    display: block;
+    height: 26px;
+    padding: 8px 12px;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.428571429;
+    color: #333 !important;
+    background-color: rgba(255, 255, 255, 0.55) !important;
+    background-image: none;
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    width: 100%;
+    text-align: center;
 }
+
 .loginbox .subcontent {
-  text-align: left;
-  padding: 0;
-  margin: 0;
+    text-align: left;
+    padding: 0;
+    margin: 0;
 }
+
 .loginbox h2,
 .loginbox .subcontent {
-  text-align: inherit;
-  padding: 0;
-  margin: 0;
+    text-align: inherit;
+    padding: 0;
+    margin: 0;
 }
+
 .loginbox .loginpanel input[type="submit"] {
-  width: 35%;
-  color: #fff;
-  background-color: #47a447;
-  border-color: #398439;
-  float: right;
-  margin-bottom: 14px;
+    width: 35%;
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439;
+    float: right;
+    margin-bottom: 14px;
 }
+
 .loginbox .rememberpass label {
-  color: #646464;
-  text-decoration: none;
-  font-size: 12px;
+    color: #646464;
+    text-decoration: none;
+    font-size: 12px;
 }
+
 .loginbox .forgetpass {
-  margin: auto;
-  width: 60%;
-  text-align: center;
-  clear: both;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    clear: both;
 }
+
 .loginbox .forgetpass a {
-  color: #646464;
-  text-decoration: none;
+    color: #646464;
+    text-decoration: none;
 }
+
 .loginbox .forgetpass a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 .loginbox .loginpanel {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 .loginbox .loginpanel form p {
-  color: #333;
-  font-size: 15px;
-  font-weight: bold;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
 }
+
 .loginbox .loginpanel form div.rememberpass input[type="checkbox"] {
-  cursor: pointer;
-  float: left;
-  margin-top: 2px;
+    cursor: pointer;
+    float: left;
+    margin-top: 2px;
 }
+
 .loginbox .loginpanel form div.rememberpass label {
-  float: left;
-  font-size: 12px;
+    float: left;
+    font-size: 12px;
 }
+
 .loginbox .loginpanel .desc {
-  font-size: 12px;
-  text-align: center;
-  margin-top: 0px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0px;
 }
+
 .loginbox .loginpanel label {
-  color: #333;
-  font-size: 18px;
-  text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
 }
+
 .loginbox .loginpanel a {
-  margin-top: 10px;
-  font-size: 13px;
-  font-weight: bold;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
 }
+
 .loginbox .loginpanel .clearer {
-  clear: none;
+    clear: none;
 }
+
 .guestsub .desc {
-  display: none;
+    display: none;
 }
+
 .dir-rtl .loginpanel .icon-submit {
-  float: left;
-  left: -30px;
-  right: auto;
+    float: left;
+    left: -30px;
+    right: auto;
 }
+
 .login-wrapper {
-  margin-top: 50px;
-  padding: 15px 45px;
-  background: none;
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  -webkit-box-shadow: 8px 8px 21px -3px rgba(0, 0, 0, 0.85);
-  -moz-box-shadow: 8px 8px 21px -3px rgba(0, 0, 0, 0.75);
-  box-shadow: 8px 8px 21px -3px rgba(0, 0, 0, 0.75);
-  font-family: "Roboto";
-  width: 70%;
-  margin: auto;
+    margin-top: 50px;
+    padding: 15px 45px;
+    background: none;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    -webkit-box-shadow: 8px 8px 21px -3px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 8px 8px 21px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 8px 8px 21px -3px rgba(0, 0, 0, 0.75);
+    font-family: "Roboto";
+    width: 70%;
+    margin: auto;
 }
+
 #page-login-index #page-footer {
-  display: none;
+    display: none;
 }
+
+
 /* BigVideo Style **/
+
 #page-login-index .wrapper {
-  position: absolute;
-  width: 500%;
-  height: 100%;
-  z-index: 0;
+    position: absolute;
+    width: 500%;
+    height: 100%;
+    z-index: 0;
 }
+
 #page-login-index .overlay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: url(/theme/saviotheme/pix/bg_texture.png) repeat;
-}
-#page-login-index .screen {
-  position: relative;
-  height: 100%;
-  width: 20%;
-  /*  NOTE: numVideos/100%  */
-  float: left;
-  overflow: hidden;
-}
-#page-login-index .big-image {
-  min-height: 100%;
-  height: auto;
-  width: auto;
-}
-#page-login-index nav {
-  position: absolute;
-  right: 5%;
-  top: 45%;
-  padding: 20px;
-  background: #000;
-  border-radius: 40px;
-  opacity: .4;
-  cursor: pointer;
-  z-index: 1000;
-}
-#page-login-index nav.left {
-  position: absolute;
-  left: 5%;
-  right: inherit;
-}
-#page-login-index nav:hover {
-  opacity: 0.6;
-}
-#page-login-index nav .next-icon {
-  display: block;
-  border-top: solid 2px #fff;
-  border-right: solid 2px #fff;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: -5px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  color: #fff;
-  text-decoration: none;
-}
-#page-login-index nav .prev-icon {
-  display: block;
-  border-top: solid 2px #fff;
-  border-right: solid 2px #fff;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: 5px;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  color: #fff;
-  text-decoration: none;
-}
-#big-video-wrap .vjs-control-bar {
-  display: none;
-}
-@media (max-width: 1024px) {
-  .loginbox .loginpanel input[type="submit"] {
     width: 100%;
-  }
-  #page-login-index nav {
-    display: none;
-  }
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: url(/theme/saviotheme/pix/bg_texture.png) repeat;
 }
+
+#page-login-index .screen {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    /*  NOTE: numVideos/100%  */
+    float: left;
+    overflow: hidden;
+}
+
+#page-login-index .big-image {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#page-login-index nav {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    padding: 20px;
+    background: #000;
+    border-radius: 40px;
+    opacity: .4;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#page-login-index nav.left {
+    position: absolute;
+    left: 5%;
+    right: inherit;
+}
+
+#page-login-index nav:hover {
+    opacity: 0.6;
+}
+
+#page-login-index nav .next-icon {
+    display: block;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #fff;
+    text-decoration: none;
+}
+
+#page-login-index nav .prev-icon {
+    display: block;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 5px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    color: #fff;
+    text-decoration: none;
+}
+
+#big-video-wrap .vjs-control-bar {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .loginbox .loginpanel input[type="submit"] {
+        width: 100%;
+    }
+    #page-login-index nav {
+        display: none;
+    }
+}
+
 @media (max-width: 767px) {
-  #page-login-index nav {
-    display: none;
-  }
+    #page-login-index nav {
+        display: none;
+    }
 }
+
+
 /* @end */
+
+
 /*# sourceMappingURL=login.css.map */
